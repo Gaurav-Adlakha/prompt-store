@@ -122,6 +122,26 @@ Markdown, quoted with ```md for easy copy-and-asting.
 
 ## 📚 Useful Prompt Patterns
 
+### Pattern: receipe bot ui prompt
+```
+i want my interface to have
+  - a single trace view, where i can cleanly visualize the entire conversation linearly, including tool calls and results, and quickly assess whether the final recipe answers the user's query well
+  - an open-ended feedback box for me te provide open notes on what i did not like about the generated recipe
+  - a drop down of failure modes (that should start empty and populate as i write open notes)
+
+quality of life elements
+- hotkeys to quickly navigate traces
+- progress bar to see how may i have created.
+- automatically save traces to the data/labeled_trace_latesst.csv
+
+I want the vibe to look like a terminal there, but easy on the eyes. monospace any code (e.g., tool calls)
+
+Tech Stack
+• Backend: A lightweight FastAPI server (Python) to serve the trace data and save your labels. This seems like a good fit given your experience with Python.
+• Frontend: A single-page application using vanilla HT ML, CSS, and Javalcript. This will keep it simple, fast, and easy to run without a complex build process.
+
+```
+
 ### Pattern: Persona-Task-Format
 ```
 You are a [ROLE]. Your task is to [SPECIFIC TASK]. 
